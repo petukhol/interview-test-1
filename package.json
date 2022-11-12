@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "watch:sass": "node-sass -w styles/index.scss styles/index.css --output-style compressed"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

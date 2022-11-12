@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <h1>Preferences</h1>
+        <p>On this page you can configure the main system parameters available for customization</p>
+        <form onsubmit="submitForm()" class="form">
+            <div class="item">
+                <label for="field-input-company">Company Title</label>
+                <input id="field-input-company" type="text">
+            </div>
+            <div class="item">
+                <label for="first-day">First Day</label>
+                <div onclick="handleClickWithinSelectComponent()" id="field-select-week_day" class="dropdown-wrapper"
+                    tabindex="1">
+                    <span>Monday</span>
+                    <ul class="dropdown-list">
+                        <li><a href="#">Monday</a></li>
+                        <li><a href="#">Sunday</a></li>
+                        <li><a href="#">System</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <label for="container-width">Container Width</label>
+                <div onclick="handleClickWithinSelectComponent()" id="field-select-width" class="dropdown-wrapper"
+                    tabindex="1">
+                    <span>Fixed</span>
+                    <ul class="dropdown-list">
+                        <li><a href="#">Fixed</a></li>
+                        <li><a href="#">System</a></li>
+                        <li><a href="#">Info</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <label for="homepage">Homepage</label>
+                <div onclick="handleClickWithinSelectComponent()" id="field-select-homepage" class="dropdown-wrapper"
+                    tabindex="1">
+                    <span>Starred Projects</span>
+                    <ul class="dropdown-list">
+                        <li><a href="#">Starred Projects</a></li>
+                        <li><a href="#">System</a></li>
+                        <li><a href="#">Info</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <label for="field-input-size">Indent Size</label>
+                <input id="field-input-size" type="text" disabled placeholder="Default">
+            </div>
+            <div class="item">
+                <label for="field-input-code">Personal Code</label>
+                <div>
+                    <div class="code" id="field-multi_input-code">
+                        <input type="text" maxlength="4">
+                        <span>-</span>
+                        <input type="text" maxlength="4">
+                        <span>-</span>
+                        <input type="text" maxlength="4">
+                    </div>
+                    <span class="comment">12 digits</span>
+                </div>
+            </div>
+            <div class="item">
+                <label for="theme">Theme</label>
+                <div class="themes">
+                    <label for="light">
+                        <input id="field-radio-light" type="radio" name="value" value="light">
+                        Light
+                    </label>
+                    <label for="dark">
+                        <input id="field-radio-dark" type="radio" name="value" value="dark">
+                        Dark
+                    </label>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="submit">Apply and Save</button>
+                <button type="reset" class="reset">Cancel</button>
+            </div>
+        </form>
+        <footer>
+            <div>
+                <p>2020-2022 <a href="#">Terms of Service</a> and <a href="#">Conditions</a></p>
+            </div>
+        </footer>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
